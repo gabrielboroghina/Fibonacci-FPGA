@@ -1,11 +1,12 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.std_logic_unsigned.all;
+use IEEE.numeric_bit.ALL;
 
 
 entity fibonacci is
     Port ( n : in STD_LOGIC_VECTOR (7 downto 0);
-           clk, reset : in STD_LOGIC; cnt : out STD_LOGIC_vector(7 downto 0); e : out std_logic;
+           clk, reset : in BIT; cnt : out STD_LOGIC_vector(7 downto 0); e : out std_logic;
            fib : out STD_LOGIC_VECTOR (15 downto 0));
 end fibonacci;
 
@@ -13,7 +14,8 @@ architecture Behavioral of fibonacci is
     component reg is
         Generic (size: integer);
         Port (v : in STD_LOGIC_VECTOR (size - 1 downto 0);
-              clk, reset, en : in STD_LOGIC;
+              clk, reset : in BIT;
+              en : in STD_LOGIC;
               O : out STD_LOGIC_VECTOR (size - 1 downto 0));
     end component;
     
@@ -37,8 +39,7 @@ begin
     reg3: reg GENERIC MAP (size => 8) PORT MAP (v => n, clk => clk, reset => reset, en => '1', O => nt);
     
     -- define MUX selection signal
-    sel <= '0' when nt = nt_1 else
-           '1' when nt /= nt_1;
+    sel <= '0' when nt = nt_1 else '1';
     
     -- MUX-es for a, b and counter
     with sel select a <= ((15 downto 1 => '0') & '1') when '1', sum when others;
@@ -52,19 +53,16 @@ begin
     
     compute_next_nr: adder_CLA_16bit PORT MAP (a => a_sync, b => b_sync, cin => '0', s => sum);
     
-    process(clk, reset, n)
+    process(clk, reset, n, en, count)
     begin
         if (reset = '0') then
             count_inc <= (others => '0');
         elsif rising_edge(clk) and en = '1' then
             count_inc <= count + 1;
         end if;
-        
-        if (count_inc = nt or nt(7 downto 1) = "0000000") then
-            en <= '0';
-        else
-            en <= '1';
-        end if;
     end process;
+    
+    en <= '0' when count_inc = nt or nt(7 downto 1) = "0000000" else '1'; -- define enable
+    
     cnt <= count_inc; e <= en;
 end Behavioral;

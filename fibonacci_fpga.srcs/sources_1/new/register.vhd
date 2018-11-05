@@ -6,14 +6,15 @@ use IEEE.numeric_bit.ALL;
 entity reg is
     Generic (size: integer);
     Port (v : in STD_LOGIC_VECTOR (size - 1 downto 0);
-          clk, reset, en : in STD_LOGIC;
+          clk, reset : in BIT;
+          en : in STD_LOGIC;
           O : out STD_LOGIC_VECTOR (size - 1 downto 0));
 end reg;
 
 architecture Behavioral of reg is
 
 begin
-    process (clk, reset)
+    process (clk, reset, en)
     begin
         if (reset = '0') then
             O <= (others => '0');

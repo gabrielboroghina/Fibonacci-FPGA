@@ -24,19 +24,18 @@ end test_top;
 architecture Behavioral of test_top is
     component top is
     Port ( number : in STD_LOGIC_VECTOR (7 downto 0);
-           clk, reset : in STD_LOGIC;
+           clk_100MHz, reset : in BIT;
            AN : out STD_LOGIC_VECTOR (7 downto 0); -- anodes
-           seg : out STD_LOGIC_VECTOR (0 to 6);   -- cathodes
-           f : out STD_LOGIC_VECTOR (15 downto 0)
+           seg : out STD_LOGIC_VECTOR (0 to 6)   -- cathodes
            );
     end component;
     
     signal nr, AN: STD_LOGIC_VECTOR (7 downto 0);
-    signal clk : std_logic := '0';
+    signal clk : BIT := '0';
     signal seg : STD_LOGIC_VECTOR (0 to 6);
     signal f : STD_LOGIC_VECTOR (15 downto 0);
 begin
-    uut: top PORT MAP (number => nr, clk => clk, reset => '1', AN => AN, seg => seg, f => f);
+    uut: top PORT MAP (number => nr, clk_100MHz => clk, reset => '1', AN => AN, seg => seg);
     
     clk <= not clk after 2ns;
     process

@@ -23,13 +23,14 @@ end test_fib;
 architecture Behavioral of test_fib is
     component fibonacci is
         Port ( n : in STD_LOGIC_VECTOR (7 downto 0);
-               clk, reset : in STD_LOGIC; cnt : out STD_LOGIC_vector(7 downto 0); e :out std_logic;
+               clk, reset : in BIT; cnt : out STD_LOGIC_vector(7 downto 0); e : out std_logic;
                fib : out STD_LOGIC_VECTOR (15 downto 0));
     end component;
 
     signal nr : STD_LOGIC_VECTOR (7 downto 0) := (others => '0');
     signal res : STD_LOGIC_VECTOR (15 downto 0);
-    signal clk, e : STD_LOGIC := '0';
+    signal clk : BIT := '0';
+    signal e : STD_LOGIC := '0';
     signal cnt : STD_LOGIC_vector(7 downto 0);
 begin
     clk <= not clk after 2ns;
