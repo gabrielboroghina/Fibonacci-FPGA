@@ -30,9 +30,10 @@ architecture Behavioral of fibonacci is
     signal n_old, nt_1, nt, count, count_inc : STD_LOGIC_VECTOR (7 downto 0);
     signal sel, en : STD_LOGIC;
 begin
-    with nt select fib <= (others => '0') when "00000000",
-                         ((15 downto 1 => '0') & '1') when "00000001",
-                         sum when others;
+    fib <= (others => '0') when nt = "00000000" else
+           ((15 downto 1 => '0') & '1') when nt = "00000001" else
+           "0010011100001111" when nt > "00010100" else -- 9999 when nt > 20 (overflow)
+           sum;
 
     reg1: reg GENERIC MAP (size => 8) PORT MAP (v => n, clk => clk, reset => reset, en => '1', O => n_old);
     reg2: reg GENERIC MAP (size => 8) PORT MAP (v => n_old, clk => clk, reset => reset, en => '1', O => nt_1);
@@ -62,7 +63,7 @@ begin
         end if;
     end process;
     
-    en <= '0' when count_inc = nt or nt(7 downto 1) = "0000000" else '1'; -- define enable
+    en <= '0' when count_inc = nt or nt(7 downto 1) = "0000000" or nt > "00010100" else '1'; -- define enable
     
     cnt <= count_inc; e <= en;
 end Behavioral;

@@ -44,7 +44,7 @@ begin
         wait for 100ns;
         nr <= "00000001";
         wait for 100ns;
-        nr <= "00001001";
+        nr <= "01001001";
     end process;
 
 end Behavioral;
