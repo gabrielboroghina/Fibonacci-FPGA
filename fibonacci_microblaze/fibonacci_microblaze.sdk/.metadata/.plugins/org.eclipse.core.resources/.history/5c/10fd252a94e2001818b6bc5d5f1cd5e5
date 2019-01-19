@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+//#include "xtime_l.h"
+
+void print(char *str);
+
+int main() {
+    XTime tStart, tEnd;
+
+    init_platform();
+
+    XTime_GetTime(&tStart);
+    print("Hello World\n\r");
+    XTime_GetTime(&tEnd);
+
+    printf("Output took %llu clock cycles.\n", 2*(tEnd - tStart));
+    printf("Output took %.2f us.\n",
+           1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000));
+
+    return 0;
+}

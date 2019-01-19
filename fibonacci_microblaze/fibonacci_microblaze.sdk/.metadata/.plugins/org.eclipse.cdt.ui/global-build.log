@@ -1,0 +1,1311 @@
+14:54:56 **** Build of project fibonacci_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_5/src"
+make -C microblaze_0/libsrc/standalone_v6_5/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_6/src"
+make -C microblaze_0/libsrc/cpu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_5/src"
+make -C microblaze_0/libsrc/standalone_v6_5/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+14:55:04 **** Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2748	    268	   3112	   6128	   17f0	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+14:56:20 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:10: error: expected expression before ')' token
+     for ()
+          ^
+../src/helloworld.c:59:10: error: expected expression before ')' token
+../src/helloworld.c:57:25: warning: unused variable 'c' [-Wunused-variable]
+     int n = 7, i, a, b, c;
+                         ^
+../src/helloworld.c:57:22: warning: unused variable 'b' [-Wunused-variable]
+     int n = 7, i, a, b, c;
+                      ^
+../src/helloworld.c:57:19: warning: unused variable 'a' [-Wunused-variable]
+     int n = 7, i, a, b, c;
+                   ^
+../src/helloworld.c:57:16: warning: unused variable 'i' [-Wunused-variable]
+     int n = 7, i, a, b, c;
+                ^
+../src/helloworld.c:57:9: warning: unused variable 'n' [-Wunused-variable]
+     int n = 7, i, a, b, c;
+         ^
+make: *** [src/helloworld.o] Error 1
+14:56:52 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2660	    268	   3112	   6040	   1798	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+14:57:58 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:67:22: error: expected expression before ')' token
+     xil_printf("%i", );
+                      ^
+make: *** [src/helloworld.o] Error 1
+14:58:02 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6100	    272	   3108	   9480	   2508	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:01:06 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6220	    272	   3108	   9600	   2580	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:01:10 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6220	    272	   3108	   9600	   2580	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:02:57 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:03:33 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:03:48 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:10:22 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:10:49 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6220	    272	   3108	   9600	   2580	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:11:31 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6128	    272	   3104	   9504	   2520	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:12:01 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:61:5: warning: 'i' is used uninitialized in this function [-Wuninitialized]
+     xil_printf("The %ith fibonacci nr is: %i\n", i, c);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:61:5: warning: 'c' is used uninitialized in this function [-Wuninitialized]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6188	    272	   3108	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:12:19 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6188	    272	   3108	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:12:28 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6188	    272	   3108	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:12:45 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:13:44 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6192	    272	   3104	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:13:46 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:13:49 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:14:53 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6192	    272	   3104	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:14:55 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:15:06 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6192	    272	   3104	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:15:07 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:16:25 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6192	    272	   3104	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:16:27 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:16:41 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6192	    272	   3104	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:16:45 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6212	    272	   3108	   9592	   2578	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:16:47 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:17:13 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6188	    272	   3108	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:17:15 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:18:13 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6192	    272	   3104	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:18:36 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6192	    272	   3104	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:19:26 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:6: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+      xil_printf("The %ith fibonacci nr is: %i\n", i, c);
+      ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6188	    272	   3108	   9568	   2560	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:19:35 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6176	    272	   3104	   9552	   2550	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:19:38 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:19:56 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6180	    272	   3108	   9560	   2558	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:20:00 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6184	    272	   3104	   9560	   2558	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:21:07 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6184	    272	   3104	   9560	   2558	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:21:21 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:21:25 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:16:05 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2568	    268	   3108	   5944	   1738	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:18:20 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:18:22 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:19:56 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:21:31 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:58:12: warning: unused variable 'init_time' [-Wunused-variable]
+     time_t init_time = time(NULL);
+            ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fibonacci_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:23:43 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fibonacci_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:25:56 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:52:23: fatal error: sys/timer.h: No such file or directory
+ #include "sys/timer.h"
+                       ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+15:26:12 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:27: warning: implicit declaration of function 'xget_clock_ticks' [-Wimplicit-function-declaration]
+     unsigned int t_init = xget_clock_ticks();
+                           ^~~~~~~~~~~~~~~~
+../src/helloworld.c:59:18: warning: unused variable 't_init' [-Wunused-variable]
+     unsigned int t_init = xget_clock_ticks();
+                  ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\gabri\Desktop\CN\fibonacci_microblaze\fibonacci_microblaze.sdk\fibonacci\Debug/../src/helloworld.c:59: undefined reference to `xget_clock_ticks'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:26:20 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:52:23: fatal error: sys/timer.h: No such file or directory
+ #include "sys/timer.h"
+                       ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+15:26:57 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:52:0:
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:63:27: warning: implicit declaration of function 'xget_clock_ticks' [-Wimplicit-function-declaration]
+     unsigned int t_init = xget_clock_ticks();
+                           ^~~~~~~~~~~~~~~~
+../src/helloworld.c:63:18: warning: unused variable 't_init' [-Wunused-variable]
+     unsigned int t_init = xget_clock_ticks();
+                  ^~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\gabri\Desktop\CN\fibonacci_microblaze\fibonacci_microblaze.sdk\fibonacci\Debug/../src/helloworld.c:63: undefined reference to `xget_clock_ticks'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:27:18 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:52:0:
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:12: warning: unused variable 'init_time' [-Wunused-variable]
+     time_t init_time = time(NULL);
+            ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fibonacci_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:30:00 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fibonacci_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:32:08 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:52:0:
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:12: warning: unused variable 'init_time' [-Wunused-variable]
+     time_t init_time = time(NULL);
+            ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fibonacci_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:32:57 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:52:0:
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:33:00 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:35:06 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:35:50 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:52:0:
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/helloworld.c:57:21: fatal error: xtime_l.h: No such file or directory
+ #include "xtime_l.h"
+                     ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+15:36:02 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:52:0:
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:36:06 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:52:0:
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:62:12: warning: unused variable 'init_time' [-Wunused-variable]
+     time_t init_time = time(NULL);
+            ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fibonacci_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:37:06 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:52:0:
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:115:2: warning: #warning The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert. [-Wcpp]
+ #warning  The xbasics_type.h file is deprecated and users should use xil_types.h and xil_assert.
+  ^~~~~~~
+../../fibonacci_bsp/microblaze_0/include/xbasic_types.h:116:2: warning: #warning Please refer the Standalone BSP UG647 for further details [-Wcpp]
+ #warning  Please refer the Standalone BSP UG647 for further details
+  ^~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:37:40 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:39:48 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:40:00 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:40:04 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:41:41 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:53:22: fatal error: sys.time.h: No such file or directory
+ #include <sys.time.h>
+                      ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+15:41:45 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:41:50 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:12: warning: unused variable 'init_time' [-Wunused-variable]
+     time_t init_time = time(NULL);
+            ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+../../fibonacci_bsp/microblaze_0/lib\libc.a(lib_a-gettimeofdayr.o): In function `_gettimeofday_r':
+(.text+0x2c): undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:42:00 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:24: error: too few arguments to function 'gettimeofday'
+     time_t init_time = gettimeofday(NULL);
+                        ^~~~~~~~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\time.h:432:5: note: declared here
+ int _EXFUN(gettimeofday, (struct timeval *__restrict __p,
+     ^
+../src/helloworld.c:59:12: warning: unused variable 'init_time' [-Wunused-variable]
+     time_t init_time = gettimeofday(NULL);
+            ^~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+15:42:44 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:12: warning: unused variable 'init_time' [-Wunused-variable]
+     time_t init_time = gettimeofday(NULL, NULL);
+            ^~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\gabri\Desktop\CN\fibonacci_microblaze\fibonacci_microblaze.sdk\fibonacci\Debug/../src/helloworld.c:59: undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:43:16 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:55:8: error: redefinition of 'struct timeval'
+ struct timeval {
+        ^~~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\select.h:26:0,
+                 from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\types.h:85,
+                 from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:48,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\_timeval.h:51:8: note: originally defined here
+ struct timeval {
+        ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:18: error: 't_init' undeclared (first use in this function)
+     gettimeofday(t_init, NULL);
+                  ^~~~~~
+../src/helloworld.c:64:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+15:43:26 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:55:16: error: redefinition of 'struct timeval'
+ typedef struct timeval {
+                ^~~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\select.h:26:0,
+                 from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\types.h:85,
+                 from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:48,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\_timeval.h:51:8: note: originally defined here
+ struct timeval {
+        ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:18: error: expected expression before 't_init'
+     gettimeofday(t_init, NULL);
+                  ^~~~~~
+../src/helloworld.c:64:5: error: too few arguments to function 'gettimeofday'
+     gettimeofday(t_init, NULL);
+     ^~~~~~~~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\time.h:432:5: note: declared here
+ int _EXFUN(gettimeofday, (struct timeval *__restrict __p,
+     ^
+make: *** [src/helloworld.o] Error 1
+15:43:41 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:55:8: error: redefinition of 'struct timeval'
+ struct timeval {
+        ^~~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\select.h:26:0,
+                 from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\types.h:85,
+                 from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:48,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\_timeval.h:51:8: note: originally defined here
+ struct timeval {
+        ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:18: error: incompatible type for argument 1 of 'gettimeofday'
+     gettimeofday(t_init, NULL);
+                  ^~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\time.h:432:5: note: expected 'struct timeval * restrict' but argument is of type 'struct timeval'
+ int _EXFUN(gettimeofday, (struct timeval *__restrict __p,
+     ^
+make: *** [src/helloworld.o] Error 1
+15:43:45 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:55:8: error: redefinition of 'struct timeval'
+ struct timeval {
+        ^~~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\select.h:26:0,
+                 from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\types.h:85,
+                 from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:48,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\_timeval.h:51:8: note: originally defined here
+ struct timeval {
+        ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:64:18: error: incompatible type for argument 1 of 'gettimeofday'
+     gettimeofday(t_init, NULL);
+                  ^~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\time.h:432:5: note: expected 'struct timeval * restrict' but argument is of type 'struct timeval'
+ int _EXFUN(gettimeofday, (struct timeval *__restrict __p,
+     ^
+make: *** [src/helloworld.o] Error 1
+15:43:49 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:18: error: 't_init' undeclared (first use in this function)
+     gettimeofday(t_init, NULL);
+                  ^~~~~~
+../src/helloworld.c:59:18: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+15:43:54 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:5: error: unknown type name 'timeval'
+     timeval t_init;
+     ^~~~~~~
+../src/helloworld.c:59:5: note: use 'struct' keyword to refer to the type
+../src/helloworld.c:60:18: warning: passing argument 1 of 'gettimeofday' makes pointer from integer without a cast [-Wint-conversion]
+     gettimeofday(t_init, NULL);
+                  ^~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\time.h:432:5: note: expected 'struct timeval * restrict' but argument is of type 'int'
+ int _EXFUN(gettimeofday, (struct timeval *__restrict __p,
+     ^
+make: *** [src/helloworld.o] Error 1
+15:44:08 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:18: error: incompatible type for argument 1 of 'gettimeofday'
+     gettimeofday(t_init, NULL);
+                  ^~~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:48:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\sys\time.h:432:5: note: expected 'struct timeval * restrict' but argument is of type 'struct timeval'
+ int _EXFUN(gettimeofday, (struct timeval *__restrict __p,
+     ^
+make: *** [src/helloworld.o] Error 1
+15:44:23 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:60:5: warning: 't_init' is used uninitialized in this function [-Wuninitialized]
+     gettimeofday(t_init, NULL);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\gabri\Desktop\CN\fibonacci_microblaze\fibonacci_microblaze.sdk\fibonacci\Debug/../src/helloworld.c:60: undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:45:19 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:59:5: warning: 't_init' is used uninitialized in this function [-Wuninitialized]
+     gettimeofday(t_init, NULL);
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/helloworld.o: In function `main':
+C:\Users\gabri\Desktop\CN\fibonacci_microblaze\fibonacci_microblaze.sdk\fibonacci\Debug/../src/helloworld.c:59: undefined reference to `gettimeofday'
+collect2.exe: error: ld returned 1 exit status
+make: *** [fibonacci.elf] Error 1
+15:47:32 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:4:21: fatal error: xtime_l.h: No such file or directory
+ #include "xtime_l.h"
+                     ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+15:49:07 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:4:21: fatal error: xtime_l.h: No such file or directory
+ #include "xtime_l.h"
+                     ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+15:50:53 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:6:6: error: conflicting types for 'print'
+ void print(char *str);
+      ^~~~~
+In file included from e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:29:0,
+                 from ../src/helloworld.c:1:
+e:\xilinx\sdk\2017.4\gnu\microblaze\nt\microblaze-xilinx-elf\include\stdio.h:231:9: note: previous declaration of 'print' was here
+ void    _EXFUN(print, (const char* ));
+         ^
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:9:5: error: unknown type name 'XTime'
+     XTime tStart, tEnd;
+     ^~~~~
+../src/helloworld.c:13:5: warning: implicit declaration of function 'XTime_GetTime' [-Wimplicit-function-declaration]
+     XTime_GetTime(&tStart);
+     ^~~~~~~~~~~~~
+../src/helloworld.c:17:28: warning: format '%llu' expects argument of type 'long long unsigned int', but argument 2 has type 'int' [-Wformat=]
+     printf("Output took %llu clock cycles.\n", 2*(tEnd - tStart));
+                            ^
+../src/helloworld.c:19:37: error: 'COUNTS_PER_SECOND' undeclared (first use in this function)
+            1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000));
+                                     ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:19:37: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+15:51:02 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c:4:21: fatal error: xtime_l.h: No such file or directory
+ #include "xtime_l.h"
+                     ^
+compilation terminated.
+make: *** [src/helloworld.o] Error 1
+15:54:08 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+15:56:34 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:57:12 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+15:59:20 **** Auto Build of configuration Debug for project fibonacci ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../fibonacci_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: fibonacci.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../fibonacci_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "fibonacci.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: fibonacci.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size fibonacci.elf  |tee "fibonacci.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6156	    272	   3108	   9536	   2540	fibonacci.elf
+'Finished building: fibonacci.elf.size'
+' '
+17:35:45 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+17:38:19 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+14:03:17 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+14:03:47 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+14:04:03 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+14:06:11 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.
+14:07:02 **** Incremental Build of configuration Debug for project fibonacci ****
+make all 
+make: Nothing to be done for `all'.

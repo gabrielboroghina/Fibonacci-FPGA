@@ -1,0 +1,17 @@
+0.6
+2017.4
+Dec 15 2017
+21:07:18
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sim_1/new/test_fib.vhd,1541525322,vhdl,,,,test_fib,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sim_1/new/test_top.vhd,1541428175,vhdl,,,,test_top,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/CLA_4.vhd,1540384711,vhdl,,,,cla_4,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/LCU.vhd,1541314852,vhdl,,,,adder_cla_16bit,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/adder_CLA_8bit.vhd,1541271183,vhdl,,,,adder_cla_8bit,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/bcd2_to_bin.vhd,1541271824,vhdl,,,,bcd2_to_bin,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/bcd_to_cathodes.vhd,1540384419,vhdl,,,,bcd_to_cathodes,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/bin_to_bcd_10.vhd,1541270601,vhdl,,,,bin_to_bcd_16,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/clk_divider.vhd,1541428140,vhdl,,,,clk_divider,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/display_7seg.vhd,1541428389,vhdl,,,,display_7seg,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/fibonacci.vhd,1541525550,vhdl,,,,fibonacci,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/register.vhd,1541432141,vhdl,,,,reg,,,,,,,,
+C:/Users/gabri/Desktop/CN/fibonacci_fpga/fibonacci_fpga.srcs/sources_1/new/top.vhd,1541428525,vhdl,,,,top,,,,,,,,
